@@ -24,7 +24,7 @@ Requires: python-suds >= 0.4
 %{__python} setup.py build
 
 %install
-%{__python} setup.py install
+%{__python} setup.py install -O1 --skip-build --root %{buildroot}
 
 %clean
 %{__rm} -rf %{buildroot}
